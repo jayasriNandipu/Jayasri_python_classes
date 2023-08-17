@@ -1,0 +1,248 @@
+***********create DDD patients table*****************
+ create table ddp("patientid" varchar(10), "membershipid" varchar(10),"groupid" int,"person_nber" varchar(10));
+
+
+************insert values into table********
+ insert into Ddp
+  values(200001,	4456.162497,	100,	2748.280106),
+(200002,	4456.162497,	100,	3983.633278),
+(200003,	4456.162497,	100,	5918.043203),
+(200004,	4456.162497,	100,	5882.418134),
+(200005,	4456.162497,	100,	3519.095855),
+(200006,	4456.162497,	100,	6902.302935),
+(200007,	4456.162497,	100,	4964.159886),
+(200008,	4456.162497,	100,	2700.15556),
+(200009,	4456.162497,	100,	3027.867187),
+(200010,	4456.162497,	100,	1731.524002),
+(200011,	4456.162497,	100,	3276.203417),
+(200012,	4456.162497,	100,	4921.232625),
+(200013,	4456.162497,	100,	6305.987664),
+(200014,	4456.162497,	100,	2958.595516),
+(200015,	4456.162497,	100,	2726.349719),
+(200016,	4456.162497,	100,	9730.431104),
+(200017,	4456.162497,	100,	2597.02431),
+(200018,	4456.162497,	100,	7932.082937),
+(200019,	4456.162497,	100,	2637.33179),
+(200020,	4456.162497,	100,	5224.188779),
+(200021,	4456.162497,	100,	7949.397906),
+(200022,	4456.162497,	100,	4956.048292),
+(200023,	4456.162497,	100,	418.5762415),
+(200024,	4456.162497,	100,	6388.536609),
+(200025,	4456.162497,	100,	2898.200259),
+(200026,	4456.162497,	100,	2700.450732),
+(200027,	4456.162497,	100,	7911.30561),
+(200028,	4456.162497,	100,	4155.503806),
+(200029,	4456.162497,	100,	5097.78488),
+(200030,	4456.162497,	100,	2756.264568);
+
+
+**************create dd address table***********
+create table Dda ("patientid" varchar(10), "membershipid" varchar(10),"groupid" int,"person_nber" varchar(10), "Primary_Phone_NBR" varchar(5), "Phone2_NBR" varchar(5), "Phone3_NBR" varchar(5));
+
+
+***********insert values in table*****************
+
+insert into Dda 
+values(200001,	4456.162497,	100,	2748.280106,	"C",	"O",	"C"),
+(200002,	4456.162497,	100,	3983.633278,"C",	"O",	"C"),
+(200003,	4456.162497,	100,	5918.043203,	" ",	"O",	"H"),
+(200004,	4456.162497,	100,	5882.418134,	"C",	"O",	" "),
+(200005,	4456.162497,	100,	3519.095855,	"C",	"O",	"C"),
+(200006,	4456.162497,	100,	6902.302935,	"C",	"O",	"C"),
+(200007,	4456.162497,	100,	4964.159886,	"H",	"O",	"C"),
+(200008,	4456.162497,	100,	2700.15556,	"C",	"O",	"C"),
+(200009,	4456.162497,	100,	3027.867187,	"C",	"O",	"C"),
+(200010,	4456.162497,	100,	1731.524002,	"C",	"H",	"C"),
+(200011,	4456.162497,	100,	3276.203417,	"C",	"O",	"C"),
+(200012,	4456.162497,	100,	4921.232625,	"H",	"O",	"C"),
+(200013,	4456.162497,	100,	6305.987664,	"H",	" ",	"C"),
+(200014,	4456.162497,	100,	2958.595516,	"C",	"O",	"C"),
+(200015,	4456.162497,	100,	2726.349719,	"C",	"O",	"C"),
+(200016,	4456.162497,	100,	9730.431104,	"C",	"H",	"C"),
+(200017, 	4456.162497,	100,	2597.02431,		"C",	"O",	"O"),
+(200018,	4456.162497,	100,	7932.082937,	"C",	"O",	"C"),
+(200019,	4456.162497,	100,	2637.33179,		"O",	"O",	"H"),
+(200020,	4456.162497,	100,	5224.188779,	"C",	" ",	"C"),
+(200021,	4456.162497,	100,	7949.397906,	"C",	"O",	"C"),
+(200022,	4456.162497,	100,	4956.048292,	"C",	"O",	"C"),
+(200023,	4456.162497,	100,	418.5762415,	"C",	"H",	"O"),
+(200024,	4456.162497,	100,	6388.536609,	"C",	"O",	"C"),
+(200025,	4456.162497,	100,	2898.200259,	" ",	"O",	"C"),
+(200026,	4456.162497,	100,	2700.450732,	"C",	"O",	"C"),
+(200027,	4456.162497,	100,	7911.30561,		"C",	"O",	"H"),
+(200028,	4456.162497,	100,	4155.503806,	"C",	"O",	"C"),
+(200029,	4456.162497,	100,	5097.78488,		"C",	"O",	" "),
+(200030,	4456.162497,	100,	2756.264568,	"C",	"H",	"O");
+
+
+*********create table DF *********
+create table DF ("groupid" int(3),"Flag" varchar(10))
+ 
+
+*************insert values into table************
+insert into DF values(100,	"EarD"),
+(102,	"EyesD"),
+(103,	"Nervers"),
+(105,	"KneeF"),
+(106,	"SpineF"),
+(107,	"Obesity"),
+(108,	"Obesity-II");
+
+
+
+***********left join**************
+
+select Ddp.patientid,Ddp.membershipid,Ddp.groupid,Ddp.person_nber,Dda.Primary_Phone_NBR,Dda.Phone2_NBR,Dda.Phone3_NBR
+from Ddp left join Dda
+on Ddp.patientid = Dda.patientid and  Ddp.membershipid = Dda.membershipid and  Ddp.groupid = Dda.groupid and  Ddp.person_nber = Dda.person_nber;
+
+
+
+*********************create a data frame ********* on patients base address child ********************
+
+create table DLJ as
+select Ddp.patientid,Ddp.membershipid,Ddp.groupid,Ddp.person_nber,Dda.Primary_Phone_NBR,Dda.Phone2_NBR,Dda.Phone3_NBR
+from Ddp left join Dda
+on Ddp.patientid = Dda.patientid and  Ddp.membershipid = Dda.membershipid and  Ddp.groupid = Dda.groupid and  Ddp.person_nber = Dda.person_nber;
+
+
+
+
+*******************create a data frame with merged data frame and ddd flags***********
+create table DPAF as
+select DLJ.patientid,DLJ.membershipid,DLJ.person_nber,DLJ.Primary_Phone_NBR,DLJ.Phone2_NBR,DLJ.Phone3_NBR,DF.Flag
+from DLJ left join DF
+on DLJ.groupid = DF.groupid;
+
+
+**************column creation***************
+alter table DPAF add Cellflag;
+
+
+
+****************rename a column name*****************
+Alter table DPAF rename flag to groupid;
+
+
+************update cell flag values as P*************8
+update DPAF
+set Cellflag=="P"
+where Primary_Phone_NBR=="C";
+
+
+**************update cellflag values as S****************
+
+update DPAF 
+set Cellflag=="S"
+where Primary_Phone_NBR!="C" and Phone2_NBR=="C";
+
+
+update DPAF 
+set Cellflag=="S"
+where Primary_Phone_NBR!="C" and Phone3_NBR=="C";
+
+
+**************update cell flag values as N*********************
+
+update DPAF 
+set Cellflag=="N"
+where Primary_Phone_NBR!="C" and Phone2_NBR!="C";
+
+
+update DPAF 
+set Cellflag=="N"
+where Primary_Phone_NBR!="C" and Phone3_NBR!="C";
+
+
+********create a new column******
+alter table DPAF add Flag varchar(150);
+   
+
+
+***********update flag value******
+update DPAF
+set Flag="Total DDD patients";
+
+
+***********update cell flag values as p***************
+update DPAF 
+set Flag="Total DDD patients with P"
+where Cellflag="P";
+
+
+*************update flag values as S***********
+update DPAF 
+set Flag="Total DDD patients with S"
+where Cellflag="S";
+
+
+
+****************update flag values as N ********
+
+update DPAF 
+set Flag="Total DDD patients with N"
+where Cellflag="N";
+
+
+
+*************summery report for total bbb patients**************
+create table DPAF_P as
+select Flag,count(Cellflag) as count
+from DPAF
+where Cellflag=="P"
+group by Flag
+
+create table DPAF_S as
+select Flag,count(Cellflag) as count
+from DPAF
+where Cellflag=="s"
+group by Flag
+
+create table DPAF_N as
+select Flag,count(Cellflag) as count
+from DPAF
+where Cellflag=="N"
+group by Flag
+_________total bb patients________________
+select Flag,count(patientid) as count 
+from DPAF
+group by Flag;
+
+
+
+************append all data frames************
+create table  DF_final as
+select * from DT
+union all
+select * from DP1
+union all
+select * from DS1
+union all 
+select * from DN1;
+
+
+
+************import date function************
+create table  date as 
+SELECT CURRENT_DATE AS "DATE"
+
+
+*************import time function****************
+create table  time as 
+SELECT CURRENT_TIME AS "TIME"
+
+
+
+****************merge date time **************
+create table datetime as 
+select date.*,time.*
+from date left join time
+
+
+
+******************merge datetime and total bbb **************
+create table DF_DDD as 
+select datetime.*,DF_final.*
+from datetime left join DF_final
+
+

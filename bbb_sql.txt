@@ -1,0 +1,201 @@
+  *****************create a table
+  create table b1("patientid" varchar(10), "membershipid" varchar(10),"groupid" int,"person_nber" varchar(10));
+  
+  
+ ****************** insert values into tables**************
+ insert into B1
+values(10001,	123456891,	"Upperbody",	2386.041022),
+(10002,	123456891,	"Upperbody",	7219.568003),
+(10003,	123456891,	"Upperbody",	1110.167181),
+(10004,	123456891,	"Upperbody",	4522.639998),
+(10005,	123456891,	"Upperbody",    7305.19298),
+(10006,	123456891,	"Upperbody",    6407.115439),
+(10007,	123456891,	"Upperbody",	4824.677332),
+(10008,	123456891,	"Upperbody",	4880.812031),
+(10009,	123456891,	"Upperbody",	9920.119179),
+(10010,	123456891,	"Upperbody",	7840.809171),
+(10011,	123456891,	"Upperbody",	529.0634881),
+(10012,	123456891,	"Upperbody",	7694.738745),
+(10013,	123456891,	"Upperbody",	5513.347213),
+(10014,	123456891,	"Upperbody",	5169.103457),
+(10015,	123456891,	"Upperbody",	1139.017797),
+(10016,	123456891,	"Upperbody",	8733.449889),
+(10017,	123456891,	"Upperbody",	4827.91525),
+(10018,	123456891,	"Upperbody",	6343.44681),
+(10019,	123456891,	"Upperbody",	2736.502665),
+(10020,	123456891,	"Upperbody",	7582.624916),
+(10021,	123456891,	"Upperbody",	8208.697462),
+(10022,	123456891,	"Upperbody",	7480.909911),
+(10023,	123456891,	"Upperbody",	7795.088277),
+(10024,	123456891,	"Upperbody",	1675.716539),
+(10025,	123456891,	"Upperbody",	5531.264948),
+(10026,	123456891,	"Upperbody",	4456.870224),
+(10027,	123456891,	"Upperbody",	9339.910577),
+(10028,	123456891,	"Upperbody",	9582.562571),
+(10029,	123456891,	"Upperbody",	4514.846033),
+(10030,	123456891,	"Upperbody",	7528.4154);
+
+
+********** create a bbb address table***********************
+create table B2("patientid" varchar(10), "membershipid" varchar(10),"groupid" int,"person_nber" varchar(10), "Primary_Phone_NBR" varchar(5), "Phone2_NBR" varchar(5), "Phone3_NBR" varchar(5));
+
+
+***************** create a bbb address table*******************
+insert into B2
+values(10001,	123456891,	"Upperbody",	2386.041022, "C",	"O",	"C"),
+(10002,	123456891,	"Upperbody",	7219.568003,	"C",	"O",	"C"),
+(10003,	123456891,	"Upperbody",	1110.167181,	"C",	"O",	"C"),
+(10004,	123456891,	"Upperbody",	4522.639998,	" ",	"O",	"C"),
+(10005,	123456891,	"Upperbody",	7305.19298,		"C",	"O",	"H"),
+(10006,	123456891,	"Upperbody",	6407.115439,	"H",	"C",	"C"),
+(10007,	123456891,	"Upperbody",	4824.677332,	"C",	"O",	"C"),
+(10008,	123456891,	"Upperbody",	4880.812031,	"C",	"O",	"C"),
+(10009,	123456891,	"Upperbody",	9920.119179,	"H",	"C",	"C"),
+(10010,	123456891,	"Upperbody",	7840.809171,	"C",	"O",	"C"),
+(10011,	123456891,	"Upperbody",	529.0634881,	"C",	" ",	"O"),
+(10012,	123456891,	"Upperbody",	7694.738745,	"C",	"H",	" "),
+(10013,	123456891,	"Upperbody",	5513.347213,	"C",	"O",	"C"),
+(10014,	123456891,	"Upperbody",	5169.103457,	"C",	"O",	"C"),
+(10015,	123456891,	"Upperbody",	1139.017797,	" ",	"O",	"C"),
+(10016,	123456891,	"Upperbody",	8733.449889,	"C",	"O",	"C"),
+(10017,	123456891,	"Upperbody",	4827.91525,	"C",	"O", "C"),
+(10018,	123456891,	"Upperbody",	6343.44681,	"C",	"O",	"C"),
+(10019,	123456891,	"Upperbody",	2736.502665,	"C",	"O",	"C"),
+(10020,	123456891,	"Upperbody",	7582.624916,	"C",	"H",	"C"),
+(10021,	123456891,	"Upperbody",	8208.697462,	"C",	"O",	"H"),
+(10022,	123456891,	"Upperbody",	7480.909911,	"C",	"O",	"C"),
+(10023,	123456891,	"Upperbody",	7795.088277,	"H",	" ",	"H"),
+(10024,	123456891,	"Upperbody",	1675.716539,	"C",	"O",	"C"),
+(10025,	123456891,	"Upperbody",	5531.264948,	"C",	"O",	"C"),
+(10026,	123456891,	"Upperbody",	4456.870224,	"C",	"O",	"C"),
+(10027,	123456891,	"Upperbody",	9339.910577,	"C",	"O",	"C"),
+(10028,	123456891,	"Upperbody",	9582.562571,	"C",	"O",	"C"),
+(10029,	123456891,	"Upperbody",	4514.846033,	"C",	"O",	"C"),
+(10030,	123456891,	"Upperbody",	7528.4154,	"H",	"C",	"C");
+
+**************** left join *************
+ create table BBB as
+ select B1.patientid,B1.membershipid,B1.groupid,B1.person_nber,B2.Primary_Phone_NBR,B2.Phone2_NBR,B2.Phone3_NBR
+from B1 left join B2
+on B1.Patientid=B2.Patientid and B1.membershipid = B2.membershipid and B1.groupid = B2.groupid and B1.Person_nber = B2.Person_nber;
+
+
+*********** create a column*******************
+alter table BBB add Cellflag;
+
+
+****update cellflag as p*********
+update BBB 
+set cellflag=="P"
+where Primary_Phone_NBR=="C";
+
+
+****update cellflag as S*********
+update BBB 
+set cellflag=="S"
+where (Primary_Phone_NBR!="C") & (Phone2_NBR)=="C";
+
+update BBB 
+set cellflag=="S"
+where (Primary_Phone_NBR!="C") & (Phone3_NBR)=="C";
+
+
+****update cellflag as  N*********
+update BBB 
+set cellflag=="N"
+where (Primary_Phone_NBR!="C") & (Phone2_NBR)=="C";
+
+update BBB 
+set cellflag=="N"
+where (Primary_Phone_NBR!="C") and  (Phone3_NBR)!="C";
+
+
+*************create a columns*****************
+alter table BBB add Flag;
+
+
+********************update flag values*********
+update BBB 
+set flag="total BBB patients";
+***********summery report of total bbb ********
+select flag, COUNT (patientid)  as count 
+from BBB 
+group by Flag;
+
+**************update flag vales******
+create table TB as
+select flag, COUNT (patientid)  as count 
+from BBB 
+group by Flag;
+*******************summery report of P VALues**************
+update BBB 
+set Flag="Total BBB patients for Cellflag as P"
+where Cellflag=="P";
+
+select flag, COUNT (patientid)  as count 
+from BBB 
+where Cellflag="P"
+group by Flag;
+
+************update cell flag as S*********
+update BBB 
+set Flag="Total BBB patients for Cellflag as S"
+where Cellflag=="S";
+
+*************summery report of S vales*******
+create table BS as 
+select flag, COUNT (patientid)  as count 
+from BBB 
+where Cellflag="S"
+group by Flag;
+
+************update cell flag values as N************
+update BBB 
+set Flag="Total BBB patients for Cellflag as N"
+where Cellflag=="N";
+
+**************summery report of N Vales**********************
+create table BS as 
+select flag, COUNT (patientid)  as count 
+from BBB 
+where Cellflag="N"
+group by Flag;
+
+
+*********************Append  all BB *************
+create table Total_BBB as
+select * from  TB
+Union all
+select * from BP
+union all
+select * from B_S
+union all
+select * from B_N
+
+*************import date and time***********************
+create table  date as 
+SELECT CURRENT_DATE AS "DATE"
+
+create table  time as 
+SELECT CURRENT_TIME AS "TIME"
+
+
+****************merge date time **************
+create table datetime as 
+select date.*,time.*
+from date left join time
+
+
+******************merge datetime and total bbb **************
+select datetime.*,Total_BBB.*
+from datetime left join Total_BBB 
+
+
+
+*************finaloutput ************************
+create table Final_BBB as
+select datetime.*,Total_BBB.*
+
+
+
+
